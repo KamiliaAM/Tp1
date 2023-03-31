@@ -1,16 +1,16 @@
-on:push
-name:Deploy website on push
+on: push
+name: Deploy website on push
 jobs:
   web_deploy:
-    name:Deploy
-    runs-on:ubuntu-latest
+    name: Deploy
+    runs-on: ubuntu-latest
     steps:
-    -name:Get latest code
-     uses: actions/checkout@v3
-     - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
-      with:
-       server: files.000webhost.com
-        username: projet1siweb
+      - name: Get latest code
+        uses: actions/checkout@v3
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+         server: files.000webhost.com
+         username: projet1siweb
          password: XJEbGekHXp3P%jl3CkMI
-         server-dir : public_html/
+         server-dir:  public_html/
